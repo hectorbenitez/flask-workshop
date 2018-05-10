@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+	<h1>Hello
+	{% if user %} 
+		{{ user.username }}
+	{% else %}
+		Unknow
+	{% endif %}
+	</h1>
+
+	<ul>
+	{% for event in events %}
+	    <li>{{ event.name }} - {{ event.date }}</li>
+	{% endfor %}
+	</ul>
+{% endblock %}
